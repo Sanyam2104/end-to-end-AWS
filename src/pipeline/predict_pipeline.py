@@ -23,11 +23,11 @@ class PredictPipeline:
             print('features  : ',type(features))
 
 
-            # data_scaled = preprocessor.transform(features)
-            # print('data_scaled : ',data_scaled)
-            # preds = model.predict(data_scaled)
-            preds = model.predict(np.array([0.10526316, 0.0755814,  0.61490121, 0.03984975, 0.,0., 0.,1.,0.15789474,
-                                    0.6,0.,1.,1.,4.,1,1.,1.,0.]).reshape(1, -1))
+            data_scaled = preprocessor.transform(features)
+            print('data_scaled : ',data_scaled)
+            preds = model.predict(data_scaled)
+            # preds = model.predict(np.array([0.10526316, 0.0755814,  0.61490121, 0.03984975, 0.,0., 0.,1.,0.15789474,
+            #                         0.6,0.,1.,1.,4.,1,1.,1.,0.]).reshape(1, -1))
 
             return preds
         
